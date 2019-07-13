@@ -3,12 +3,13 @@ class School
   attr_accessor :roster, :name
 
   def initialize(name)
+    @name = name
     @roster = {}
   end
 
   def add_student(student, grade)
     if @roster[grade] == nil
-      @roster[grade] = [student]
+      @roster[grade] = [student] #creates new one
     else
       @roster[grade] << student
     end
